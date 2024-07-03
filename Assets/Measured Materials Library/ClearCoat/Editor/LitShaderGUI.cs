@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using UnityEngine.Rendering;
-using UnityEditor.Rendering.LWRP;
 using UnityEditor;
 
 namespace kTools.kShadingEditor
@@ -10,7 +9,7 @@ namespace kTools.kShadingEditor
     {
         // Properties
         private LitGUIAdvanced.LitProperties litProperties;
-        
+
         // collect properties from the material properties
         public override void FindProperties(MaterialProperty[] properties)
         {
@@ -23,10 +22,10 @@ namespace kTools.kShadingEditor
         {
             if (material == null)
                 throw new ArgumentNullException("material");
-            
+
             SetMaterialKeywords(material, LitGUIAdvanced.SetMaterialKeywords);
         }
-        
+
         // material main surface options
         public override void DrawSurfaceOptions(Material material)
         {
